@@ -1,0 +1,70 @@
+[{
+    "Books":{
+        "No tengo":[
+            {
+                "Book Name":[
+                    "Promise of Blood"
+                ],
+                "Author":"Brian McClellan",
+                "Cover":{
+                    "Img":"https://upload.wikimedia.org/wikipedia/en/9/92/Promise_of_Blood_book_cover.jpg",
+                    "artist":[
+                        "Gene Mollica",
+                        "Michael Frost"
+                    ]
+                },
+                "Country":"United States",
+                "Language":"English",
+                "Series":"The Powder Mage trilogy",
+                "Genre":[
+                    "Fantasy"
+                ],
+                "Pages":"545",
+                "Publication":[{
+                    "Publication date":"16/4/2013",
+                    "Publisher":"Orbit Books"
+                }],
+                "Media type":[
+                    "hardcover",
+                    "paperback"
+                ],
+                "Followed by":"The Crimson Campaign"
+            },{
+                "Book Name":[
+                    "Gone"
+                ],
+                "Author":"Michael Grant",
+                "Cover":{
+                    "Img":"https://upload.wikimedia.org/wikipedia/en/2/28/Gone_Michael_Grant.jpg",
+                    "artist":[]
+                },
+                "Country":"United States",
+                "Language":"English",
+                "Genre":[
+                    "Supernatural",
+                    "Superhero",
+                    "Horror",
+                    "Science fiction",
+                    "Dystopia",
+                    "Thriller"
+                ],
+                "Pages":"215",
+                "Publication":{
+                    "Publisher":"HarperCollins",
+                    "Published":[
+                        "2008–2013 (Season One)",
+                        "2017–2019 (Season Two)"
+                    ]
+                },
+                "Media type":[
+                    "hardcover",
+                    "paperback"
+                ],
+                "No. of Books":"9",
+                "Followed by":"",
+                "Series":""
+            }
+        ]
+    },
+    "no quiero":[]
+}]

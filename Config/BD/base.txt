@@ -1,0 +1,4 @@
+CREATE DATABASE colection;USE colection;
+
+CREATE TABLE tbl_autor(id_au int not null PRIMARY KEY,nombre_au varchar(255) not null,nacio_au varchar(255),fnacio_au date,edad_au int,ocupacion_au varchar(100),lenguao_au varchar(100),nobras int NOT null);
+CREATE TABLE tbl_autor(id_au int not null PRIMARY KEY,nombre_au varchar(255) not null,seudonimo_au varchar(255),nacio_au varchar(255),fnacio_au date,edad_au int,ocupacion_au varchar(100),lenguao_au varchar(100),nobras int NOT null);

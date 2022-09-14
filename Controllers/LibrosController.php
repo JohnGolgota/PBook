@@ -5,9 +5,11 @@ class LibrosController extends tbl_libors{
     {
         include_once '../Views/Libros/Libros.php';
     }
+    
 }
 if (session_start()) {
     $libroscontroller = new LibrosController();
     $libroscontroller->VistaLibros();
+    return;
 }
 ?>

@@ -1,0 +1,7 @@
+body {
+    background-color: slategray;
+}
+
+.cards > .card {
+    margin: 30px;
+}

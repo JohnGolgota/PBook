@@ -20,7 +20,7 @@
        transform="scale(0.1)"
        id="g12"><path
          id="path14"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:none"
          d="M 5000,0 H 0 V 5000 H 5000 V 0" /><path
          id="path16"
          style="fill:#f68a4f;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -98,7 +98,7 @@
            transform="matrix(1,0,0,-1,59.2563,263.627)"><tspan
              id="tspan64"
              y="0"
-             x="0 9.4091816 20.810577 31.812082 42.225681 48.714466 57.561634 67.838936 78.678749 87.951698 94.780296 105.96049 115.91458 122.40286 133.58305 143.53716 153.95076">YOUR TAGLINE HERE</tspan></text>
+             x="0 9.4091816 20.810577 31.812082 42.225681 48.714466 57.561634 67.838936 78.678749 87.951698 94.780296 105.96049 115.91458 122.40286 133.58305 143.53716 153.95076">YOUR COLLECTION HERE</tspan></text>
 </g><g
          transform="scale(10)"
          id="g68"><text
@@ -116,7 +116,7 @@
            transform="matrix(1,0,0,-1,274.03,68.9801)"><tspan
              id="tspan76"
              y="0"
-             x="0 10.14938 22.44919 34.316406 45.549812 52.548836 62.092789 73.17968 84.873085 94.875084 102.24226 114.30276 125.04006 132.03909 144.09955 154.83687 166.07024">YOUR TAGLINE HERE</tspan></text>
+             x="0 10.14938 22.44919 34.316406 45.549812 52.548836 62.092789 73.17968 84.873085 94.875084 102.24226 114.30276 125.04006 132.03909 144.09955 154.83687 166.07024">YOUR COLLECTION HERE</tspan></text>
 </g><path
          id="path80"
          style="fill:#17b1aa;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -158,7 +158,7 @@
            transform="matrix(1,0,0,-1,288.596,263.342)"><tspan
              id="tspan104"
              y="0"
-             x="0 8.2040958 18.145493 27.737291 36.817364 42.47459 50.188492 59.149429 68.601578 76.686531 82.64064 92.388695 101.06741 106.72464 116.47269 125.1524 134.23251">YOUR TAGLINE HERE</tspan></text>
+             x="0 8.2040958 18.145493 27.737291 36.817364 42.47459 50.188492 59.149429 68.601578 76.686531 82.64064 92.388695 101.06741 106.72464 116.47269 125.1524 134.23251">YOUR COLLECTION HERE</tspan></text>
 </g><path
          id="path108"
          style="fill:none;stroke:#3e4141;stroke-width:58.04710007;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -281,5 +281,5 @@
            transform="matrix(1,0,0,-1,59.2566,68.8039)"><tspan
              id="tspan186"
              y="0"
-             x="0 9.4091816 20.810577 31.812082 42.225681 48.714466 57.561634 67.838936 78.678749 87.951698 94.780296 105.96049 115.91458 122.40286 133.58305 143.53716 153.95125">YOUR TAGLINE HERE</tspan></text>
+             x="0 9.4091816 20.810577 31.812082 42.225681 48.714466 57.561634 67.838936 78.678749 87.951698 94.780296 105.96049 115.91458 122.40286 133.58305 143.53716 153.95125">YOUR COLLECTION HERE</tspan></text>
 </g></g></g></svg>

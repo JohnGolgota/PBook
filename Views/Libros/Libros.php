@@ -12,7 +12,16 @@
                     <h5 class="card-title">El problema de los tres cuerpos</h5>
                     Liu Cixin
                     <!-- determinar el estado va a ser una funcion -->
-                    <h6 class="card-title text-<?php echo "secondary"; ?>">Estado: <?php echo "Pendiente"; ?></h6>
+                    <form action="" method="POST" class="input-group">
+                        <label for="estado_li" class="input-group-text card-title">Estado: </label>
+                        <select name="estado_li" id="estado_li" class="form-select input-sm card-title text-<?php echo "secondary"; ?>">
+                            <option value="secondary" <?php if("secondary" == "secondary"){echo "selected";} ?>>Pendiente</option>
+                            <option value="success" <?php //if("success" == "success"){echo "selected";} ?>>Leido</option>
+                            <option value="warning" <?php //if("warning" == "warning"){echo "selected";} ?>>Leyendo</option>
+                        </select>
+                        <input type="hidden" name="action" value="update">
+                        <button type="submit" class="card-title btn btn-secondary btn-sm"><i class="fa-solid fa-rotate-right"></i></button>
+                    </form>
                 </div>
                 <div class="card-body text-secondary">
                     <p class="card-text">description</p>
@@ -21,12 +30,10 @@
                     <div>
                         <h6 class="card-title">Generos</h6>
                         <a href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><?php echo "aqui falta funcion"; ?></a>
+                        <a href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <div class="row">
-                        <a href="" class="btn btn-outline-<?php echo "secondary"; ?>">Actulizar Estado</a>
-                    </div>
                     <div class="row">
                         <a href="" class="btn btn-outline-warning col">Editar</a>
                         <a href="" class="btn btn-outline-danger col">Eliminar</a>
@@ -41,8 +48,6 @@
                 </div>
             </div>
         </div>
-        <img src="../Public/Img/4852810.svg" alt="" srcset="">
-        <img src="../Public/Img/6987734.svg" alt="" srcset="">
         <!-- Estado Leyendo -->
         <!-- <div class="col">
             <div class="card border-warning mb-3" style="max-width: 18rem;">

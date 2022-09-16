@@ -1,14 +1,11 @@
 body {
     background-color: slategray;
 }
-.agregar-libro-card {
-    background-color: slategray;
-}
-.agregar-libro{
-    background-color: slategray !important;
-    
-}
-
-.cards > .card {
-    margin: 30px;
-}
+/* Odie esto */
+/* #logoP {
+    width: 80px;
+    height: 80px;
+    background-image: url(../Img/4852810.png);
+    background-size: 316px;
+    background-position: -38px -50px;
+} */

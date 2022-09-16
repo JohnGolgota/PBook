@@ -21,7 +21,7 @@
         "files.encoding": "utf8",
         "terminal.explorerKind": "integrated",
         "workbench.iconTheme": "material-icon-theme",
-        "svg.preview.background": "transparent"
+        "svg.preview.background": "dark-transparent"
     },
 	"extensions": {
 		"recommendations": [

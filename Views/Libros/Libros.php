@@ -5,6 +5,7 @@
 <?php include '../Inc/nav.html'; ?>
 <div class="ui container">
 
+
     <h1>
         Esto no es include
     </h1>

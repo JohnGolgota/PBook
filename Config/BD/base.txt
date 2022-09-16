@@ -4,7 +4,7 @@ USE colection;
 
 CREATE TABLE tbl_autor(id_au int not null PRIMARY KEY,nombre_au varchar(255) not null,seudonimo_au varchar(255),nacio_au varchar(255),fnacio_au date,edad_au int,ocupacion_au varchar(100),lenguao_au varchar(100),nobras int NOT null);
 
-CREATE TABLE tbl_series(id_se int not null PRIMARY KEY,titulo_se varchar(255) not null,tituloor_se varchar(255),fpublici_se date NOT null,fpublicf_se date,id_au int,FOREIGN KEY (id_au) REFERENCES tbl_autor(id_au))
+CREATE TABLE tbl_series(id_se int not null PRIMARY KEY,titulo_se varchar(255) not null,tituloor_se varchar(255),fpublici_se date NOT null,fpublicf_se date,id_au int,FOREIGN KEY (id_au) REFERENCES tbl_autor(id_au));
 
 CREATE TABLE tbl_editorial(id_ed int not null PRIMARY KEY,nombre_ed varchar(255) not null,npublic_ed int);
 
@@ -15,3 +15,5 @@ CREATE TABLE tbl_genero(id_ge int not null PRIMARY KEY,nombre_ge varchar(50),des
 CREATE TABLE tbl_artista(id_art int NOT null PRIMARY KEY,nombre_art varchar(255) not null,redes_art varchar(255));
 
 CREATE TABLE tbl_arte_libro(id_art int,id_li int,img_artli text,FOREIGN KEY (id_art) REFERENCES tbl_artista(id_art),FOREIGN KEY (id_li) REFERENCES tbl_libros(id_li));
+
+CREATE TABLE tbl_usuarios(id_usr int AUTO_INCREMENT,nombre_usr varchar(100) NOT null, correo_usr varchar(255) not null,PRIMARY KEY(id_usr));

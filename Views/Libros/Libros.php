@@ -5,10 +5,6 @@
 <?php include '../Inc/nav.html'; ?>
 <div class="ui container">
 
-
-    <h1>
-        Esto no es include
-    </h1>
     <div class="ui cards two columns grid">
         <div class="<?php echo 'yellow'; ?> card">
             <div class="content">
@@ -20,7 +16,13 @@
             </div>
             <div class="content">
                 <div class="meta">
-                    <a>Gen</a>
+                    <span>Fecha de publicación</span>
+                    <span class="right floated">
+                        09/09/09
+                    </span>
+                </div>
+                <div class="meta">
+                    <p>Generos</p>
                 </div>
                 <div class="description">
                     <a href="" class="mini ui button inverted primary">Ciencia ficción</a>
@@ -28,178 +30,24 @@
                 </div>
             </div>
             <div class="extra content">
-                <form action="LibrosController.php?action=editstatus" method="POST">
-                    <span class="right floated">
-                        Joined in 2013
-                    </span>
+                <span class="right floated">
+                    Joined in 2013
+                </span>
+                <form action="LibrosController.php" method="POST">
+                    <input type="hidden" name="action" value="actualizar">
                     <span>
-                        <a href="" class="ui inverted <?php echo 'yellow'; ?> mini button">+</a>
+                        <input type="submit" href="" class="ui <?php echo 'yellow'; ?> mini button" value="Actualizar">
+                        <button class="ui dropdown">
+                            Libros
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a href="" class="item">Lista</a>
+                                <a href="" class="item">Ingresar</a>
+                            </div>
+                        </button>
                     </span>
                 </form>
             </div>
         </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/molly.png">
-            </div>
-            <div class="content">
-                <div class="header">Molly</div>
-                <div class="meta">
-                    <span class="date">Coworker</span>
-                </div>
-                <div class="description">
-                    Molly is a personal assistant living in Paris.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2011
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    35 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="/images/avatar2/large/elyse.png">
-            </div>
-            <div class="content">
-                <div class="header">Elyse</div>
-                <div class="meta">
-                    <a>Coworker</a>
-                </div>
-                <div class="description">
-                    Elyse is a copywriter working in New York.
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2014
-                </span>
-                <span>
-                    <i class="user icon"></i>
-                    151 Friends
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
 
 <?php include '../Inc/footer.html'; ?>

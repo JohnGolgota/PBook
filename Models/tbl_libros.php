@@ -1,5 +1,5 @@
 <?php
-class tbl_libors{
+class tbl_libros{
     protected $id_li;
     protected $titulo_li;
     protected $tituloor_li;

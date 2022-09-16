@@ -3,51 +3,65 @@
 <title>Colleccion <?php echo "Holi" ?></title>
 
 <?php include '../Inc/nav.html'; ?>
-<div class="ui container">
-
-    <div class="ui cards two columns grid">
-        <div class="<?php echo 'yellow'; ?> card">
-            <div class="content">
-                <div class="header">El problema de los tres cuerpos</div>
-                <div class="meta">Liu Cixin</div>
-            </div>
-            <div class="image">
-                <img src="https://img1.od-cdn.com/ImageType-400/5835-1/4AD/559/9D/%7B4AD5599D-BDF1-4B0C-8D09-798410DF4EFA%7DImg400.jpg">
-            </div>
-            <div class="content">
-                <div class="meta">
-                    <span>Fecha de publicación</span>
-                    <span class="right floated">
-                        09/09/09
-                    </span>
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <img src="https://img1.od-cdn.com/ImageType-400/5835-1/4AD/559/9D/%7B4AD5599D-BDF1-4B0C-8D09-798410DF4EFA%7DImg400.jpg" class="card-img-top" alt="Portadas">
+                <div class="card-header">
+                    <h5 class="card-title">El problema de los tres cuerpos</h5>
+                    Liu Cixin
+                    <!-- determinar el estado va a ser una funcion -->
+                    <h6 class="card-title text-<?php echo "secondary"; ?>">Estado: <?php echo "Pendiente"; ?></h6>
                 </div>
-                <div class="meta">
-                    <p>Generos</p>
+                <div class="card-body text-secondary">
+                    <p class="card-text">description</p>
                 </div>
-                <div class="description">
-                    <a href="" class="mini ui button inverted primary">Ciencia ficción</a>
-                    <a href="" class="mini ui button inverted primary">Ciencia ficción dura</a>
+                <div class="card-body">
+                    <div>
+                        <h6 class="card-title">Generos</h6>
+                        <a href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><?php echo "aqui falta funcion"; ?></a>
+                    </div>
                 </div>
-            </div>
-            <div class="extra content">
-                <span class="right floated">
-                    Joined in 2013
-                </span>
-                <form action="LibrosController.php" method="POST">
-                    <input type="hidden" name="action" value="actualizar">
-                    <span>
-                        <input type="submit" href="" class="ui <?php echo 'yellow'; ?> mini button" value="Actualizar">
-                        <button class="ui dropdown">
-                            Libros
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <a href="" class="item">Lista</a>
-                                <a href="" class="item">Ingresar</a>
-                            </div>
-                        </button>
-                    </span>
-                </form>
+                <div class="card-footer">
+                    <div class="row">
+                        <a href="" class="btn btn-outline-<?php echo "secondary"; ?>">Actulizar Estado</a>
+                    </div>
+                    <div class="row">
+                        <a href="" class="btn btn-outline-warning col">Editar</a>
+                        <a href="" class="btn btn-outline-danger col">Eliminar</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card mb-3" style="max-width: 18rem;">
+                <div class="card-body text-center">
+                    <button class="btn btn-outline-primary btn-lg">Agregar Libro</button>
+                </div>
+            </div>
+        </div>
+        <!-- Estado Leyendo -->
+        <!-- <div class="col">
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div> -->
+        <!-- Estado Leido -->
+        <!-- <div class="col">
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
 
 <?php include '../Inc/footer.html'; ?>

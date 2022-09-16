@@ -1,6 +1,13 @@
 body {
     background-color: slategray;
 }
+.agregar-libro-card {
+    background-color: slategray;
+}
+.agregar-libro{
+    background-color: slategray !important;
+    
+}
 
 .cards > .card {
     margin: 30px;

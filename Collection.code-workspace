@@ -20,7 +20,8 @@
         "editor.minimap.autohide": true,
         "files.encoding": "utf8",
         "terminal.explorerKind": "integrated",
-        "workbench.iconTheme": "material-icon-theme"
+        "workbench.iconTheme": "material-icon-theme",
+        "svg.preview.background": "transparent"
     },
 	"extensions": {
 		"recommendations": [

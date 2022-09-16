@@ -37,10 +37,12 @@
         <div class="col">
             <div class="card mb-3" style="max-width: 18rem;">
                 <div class="card-body text-center">
-                    <button class="btn btn-outline-primary btn-lg">Agregar Libro</button>
+                    <a href="UsuarioController.php?action=registrar"><button class="btn btn-outline-primary btn-lg">Agregar Libro</button></a>
                 </div>
             </div>
         </div>
+        <img src="../Public/Img/4852810.svg" alt="" srcset="">
+        <img src="../Public/Img/6987734.svg" alt="" srcset="">
         <!-- Estado Leyendo -->
         <!-- <div class="col">
             <div class="card border-warning mb-3" style="max-width: 18rem;">

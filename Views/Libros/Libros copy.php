@@ -4,7 +4,7 @@
 
 <?php include '../Inc/nav.html'; ?>
 <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card border-secondary mb-3" style="max-width: 18rem;">
                 <img src="https://img1.od-cdn.com/ImageType-400/5835-1/4AD/559/9D/%7B4AD5599D-BDF1-4B0C-8D09-798410DF4EFA%7DImg400.jpg" class="card-img-top" alt="Portadas">

@@ -1,0 +1,85 @@
+CREATE TABLE `tbl_arte_libro` (
+  `id_art` int(11) DEFAULT NULL,
+  `id_li` int(11) DEFAULT NULL,
+  `img_artli` text DEFAULT NULL
+);
+CREATE TABLE `tbl_artista` (
+  `id_art` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_art` varchar(255) NOT NULL,
+  `redes_art` varchar(255) DEFAULT NULL
+);
+CREATE TABLE `tbl_autor` (
+  `id_au` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_au` varchar(255) NOT NULL,
+  `seudonimo_au` varchar(255) DEFAULT NULL,
+  `nacio_au` varchar(255) DEFAULT NULL,
+  `fnacio_au` date DEFAULT NULL,
+  `edad_au` int(11) DEFAULT NULL,
+  `ocupacion_au` varchar(100) DEFAULT NULL,
+  `lenguao_au` varchar(100) DEFAULT NULL,
+  `nobras` int(11) NOT NULL
+);
+CREATE TABLE `tbl_editorial` (
+  `id_ed` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_ed` varchar(255) NOT NULL,
+  `npublic_ed` int(11) DEFAULT NULL
+);
+CREATE TABLE `tbl_genero` (
+  `id_ge` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_ge` varchar(50) DEFAULT NULL,
+  `descripcion_ge` varchar(255) DEFAULT NULL
+);
+CREATE TABLE `tbl_libros` (
+  `id_li` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo_li` varchar(255) NOT NULL,
+  `tituloor_li` varchar(255) DEFAULT NULL,
+  `fpublic_li` date NOT NULL,
+  `orderse_li` int(11) DEFAULT NULL,
+  `npag` int(11) NOT NULL,
+  `estado_li` varchar(10) DEFAULT NULL,
+  `com_li` varchar(50) DEFAULT NULL,
+  `fcom_li` date DEFAULT NULL,
+  `id_ed` int(11) DEFAULT NULL
+);
+CREATE TABLE `tbl_series` (
+  `id_se` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo_se` varchar(255) NOT NULL,
+  `tituloor_se` varchar(255) DEFAULT NULL,
+  `fpublici_se` date NOT NULL,
+  `fpublicf_se` date DEFAULT NULL,
+  `id_au` int(11) DEFAULT NULL
+);
+ALTER TABLE `tbl_arte_libro`
+  ADD KEY `id_art` (`id_art`),
+  ADD KEY `id_li` (`id_li`);
+
+ALTER TABLE `tbl_artista`
+  ADD PRIMARY KEY (`id_art`);
+
+ALTER TABLE `tbl_autor`
+  ADD PRIMARY KEY (`id_au`);
+
+ALTER TABLE `tbl_editorial`
+  ADD PRIMARY KEY (`id_ed`);
+
+ALTER TABLE `tbl_genero`
+  ADD PRIMARY KEY (`id_ge`);
+
+ALTER TABLE `tbl_libros`
+  ADD PRIMARY KEY (`id_li`),
+  ADD KEY `id_ed` (`id_ed`);
+
+ALTER TABLE `tbl_series`
+  ADD PRIMARY KEY (`id_se`),
+  ADD KEY `id_au` (`id_au`);
+
+ALTER TABLE `tbl_arte_libro`
+  ADD CONSTRAINT `tbl_arte_libro_ibfk_1` FOREIGN KEY (`id_art`) REFERENCES `tbl_artista` (`id_art`),
+  ADD CONSTRAINT `tbl_arte_libro_ibfk_2` FOREIGN KEY (`id_li`) REFERENCES `tbl_libros` (`id_li`);
+
+ALTER TABLE `tbl_libros`
+  ADD CONSTRAINT `tbl_libros_ibfk_1` FOREIGN KEY (`id_ed`) REFERENCES `tbl_editorial` (`id_ed`);
+
+ALTER TABLE `tbl_series`
+  ADD CONSTRAINT `tbl_series_ibfk_1` FOREIGN KEY (`id_au`) REFERENCES `tbl_autor` (`id_au`);
+COMMIT;

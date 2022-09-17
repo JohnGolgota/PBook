@@ -18,7 +18,7 @@ CREATE TABLE tbl_libros(
     titulo_li varchar(255) not null,
     tituloor_li varchar(255),
     serie_li varchar(255),
-    orderse_li int,
+    orderse_li float,
     arte_li text,
     artista_li varchar(255),
     fpublic_li date NOT null,

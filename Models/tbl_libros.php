@@ -12,5 +12,6 @@ class tbl_libros{
     protected $estado_li;
     protected $com_li;
     protected $fcom_li;
+    protected $id_au;
 }
 ?>

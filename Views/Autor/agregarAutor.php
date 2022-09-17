@@ -6,7 +6,7 @@
 <?php include '../Inc/nav.html'; ?>
 
 <div class="container-sm">
-    <div class="login-box">
+    <div class="container-sm">
         <form action="AutorController.php?action=guardar" method="POST" class="text-light">
             <h2>Autor</h2>
             <input type="hidden" name="action" value="guardar">

@@ -30,7 +30,7 @@
                     <div>
                         <h6 class="card-title">Generos</h6>
                         <a href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><?php echo "aqui falta funcion"; ?></a>
-                        <a href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><i class="fa-solid fa-plus"></i></a>
+                        <a data-bs-toggle="modal" data-bs-target="#nuevoGen" href="" class="btn btn-outline-<?php echo "secondary"; ?> btn-sm"><i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -44,7 +44,7 @@
         <div class="col">
             <div class="card mb-3" style="max-width: 18rem;">
                 <div class="card-body text-center">
-                    <a href="UsuarioController.php?action=registrar"><button class="btn btn-outline-primary btn-lg">Agregar Libro</button></a>
+                    <a href="LibrosController.php?action=agregar"><button class="btn btn-outline-primary btn-lg">Agregar Libro</button></a>
                 </div>
             </div>
         </div>

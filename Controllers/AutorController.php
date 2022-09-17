@@ -18,25 +18,30 @@ class AutorController extends tbl_autor{
     {
         $this->nombre_au = $nombre_au;
         if ($seudonimo_au == "") {
-            $seudonimo_au = "0";
+            $seudonimo_au = "No";
         }
         $this->seudonimo_au = $seudonimo_au;
+
         if ($fnacio_au == "") {
             $fnacio_au = date("Y-m-d");
         }
         $this->fnacio_au = $fnacio_au;
+
         if ($nacio_au == "") {
-            $nacio_au = "0";
+            $nacio_au = "Desconocido";
         }
         $this->nacio_au = $nacio_au;
+        
         if ($ocupacion_au == "") {
-            $ocupacion_au = "0";
+            $ocupacion_au = "Escritor";
         }
         $this->ocupacion_au = $ocupacion_au;
+
         if ($lenguao_au == "") {
-            $lenguao_au = "0";
+            $lenguao_au = "Sin determinar";
         }
         $this->lenguao_au = $lenguao_au;
+
         $this->RegistrarAutor();
         $this->RedirigirListaAutores();
     }

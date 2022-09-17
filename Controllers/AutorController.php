@@ -5,6 +5,15 @@ class AutorController extends tbl_autor{
     {
         include_once '../Views/Autor/agregarAutor.php';
     }
+    public function VistaListaAutor()
+    {
+        $objetoAutores = $this->AllAuthors();
+        include_once '../Views/Autor/ListarAutores.php';
+    }
+    public function RedirigirListaAutores()
+    {
+        header("Location: AutorController.php?action=lista");
+    }
     public function AlistarInformacion($nombre_au,$seudonimo_au,$fnacio_au,$nacio_au,$ocupacion_au,$lenguao_au)
     {
         $this->nombre_au = $nombre_au;
@@ -13,11 +22,11 @@ class AutorController extends tbl_autor{
         }
         $this->seudonimo_au = $seudonimo_au;
         if ($fnacio_au == "") {
-            $fnacio_au = "0";
+            $fnacio_au = date("Y-m-d");
         }
         $this->fnacio_au = $fnacio_au;
         if ($nacio_au == "") {
-            $nacio_au = date("Y-m-d");
+            $nacio_au = "0";
         }
         $this->nacio_au = $nacio_au;
         if ($ocupacion_au == "") {
@@ -28,7 +37,8 @@ class AutorController extends tbl_autor{
             $lenguao_au = "0";
         }
         $this->lenguao_au = $lenguao_au;
-        return "$nombre_au,$seudonimo_au,$fnacio_au,$nacio_au,$ocupacion_au,$lenguao_au";
+        $this->RegistrarAutor();
+        $this->RedirigirListaAutores();
     }
 }
 if (isset($_GET['action']) && $_GET['action'] == 'agregar') {
@@ -38,12 +48,18 @@ if (isset($_GET['action']) && $_GET['action'] == 'agregar') {
 }
 if (isset($_GET['action']) && $_GET['action'] == 'guardar' && !empty($_POST['nombre_au'])) { 
     $autorcontroller = new AutorController();
-    echo $autorcontroller->AlistarInformacion($_POST['nombre_au'],$_POST['seudonimo_au'],$_POST['fnacio_au'],$_POST['nacio_au'],$_POST['ocupacion_au'],$_POST['lenguao_au']);
+    $autorcontroller->AlistarInformacion($_POST['nombre_au'],$_POST['seudonimo_au'],$_POST['fnacio_au'],$_POST['nacio_au'],$_POST['ocupacion_au'],$_POST['lenguao_au']);
+    $autorcontroller->RedirigirListaAutores();
     return;
 }
 if (isset($_GET['action']) && $_GET['action'] == 'guardar' && empty($_POST['nombre_au'])) { 
     $autorcontroller = new AutorController();
     echo "Se supone que introduscaz un nombre ¡¡¡UNO!!!";
+    return;
+}
+if (isset($_GET['action']) && $_GET['action'] == 'lista') {
+    $autorcontroller = new AutorController();
+    $autorcontroller->VistaListaAutor();
     return;
 }
 if (!isset($_GET)) {
@@ -53,6 +69,7 @@ if (!isset($_GET)) {
     // $autorcontroller->
 }
 if (isset($_GET)) {
-    echo "Aqui va la lista de autores, si tuviera una!";
+    $autorcontroller = new AutorController();
+    $autorcontroller->VistaListaAutor();
     return;
 }

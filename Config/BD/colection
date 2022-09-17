@@ -8,7 +8,6 @@ CREATE TABLE tbl_autor(
     seudonimo_au varchar(255),
     nacio_au varchar(255),
     fnacio_au date,
-    edad_au int,
     ocupacion_au varchar(100),
     lenguao_au varchar(100),
     nobras int NOT null DEfAULT 0

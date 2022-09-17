@@ -16,22 +16,33 @@
                         <a class="nav-link active" aria-current="page" href="LibrosController.php">Colección</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="autores" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Autores
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="AutorController.php?action=agregar">Agregar autor</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="autores">
                             <li><a class="dropdown-item" href="AutorController.php?action=listar">Lista de autores</a></li>
+                            <li><a class="dropdown-item" href="AutorController.php?action=agregar">Agregar autor</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="LibrosController.php" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="LibrosController.php" id="libros-nav" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Libros
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="libros-nav">
+                            <li><a class="dropdown-item" href="LibrosController.php">Colección</a></li>
                             <li><a class="dropdown-item" href="LibrosController.php?action=agregar">Agregar Libro</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="LibrosController.php" id="Generos" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Generos o Categorias
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="Generos">
+                            <li><a class="dropdown-item" href="GenController.php?action=lista">Lista</a></li>
+                            <li><a class="dropdown-item" href="GenController.php?action=nuevo">Nuevo</a></li>
                         </ul>
                     </li>
                 </ul>

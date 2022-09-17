@@ -1,3 +1,32 @@
+<div class="modal fade" id="nuevoGen" tabindex="-1" aria-labelledby="Nuevo" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="GenController.php" method="POST">
+                <input type="hidden" name="action" value="guardar">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nueva categoria:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombre_ge" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre_ge" id="nombre_ge" placeholder="SFW">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion_ge" class="form-label">Descripción:</label>
+                        <textarea class="form-control" name="descripcion_ge" id="descripcion_ge" cols="30" rows="6" maxlength="255"></textarea>
+                    </div>
+                    <div class="modal-footer input-group">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Librerias Js inportadas y Fontawesome -->
 <script src="https://kit.fontawesome.com/8a160a18f4.js" crossorigin="anonymous"></script>
 

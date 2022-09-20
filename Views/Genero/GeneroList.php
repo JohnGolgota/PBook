@@ -6,7 +6,7 @@
 <div class="container">
 
     <h1>
-        Lista de Generos: <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#nuevoGen">Nuevo <i class="fa-solid fa-plus"></i></button>
+        Lista de Generos: <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#nuevoGen">Nuevo <i class="fa-solid fa-plus"></i></button>
     </h1>
     <table class="table table-striped table-hover">
         <tr class="row">
@@ -21,8 +21,7 @@
                 <td class="col"><?php echo $genero->descripcion_ge; ?></td>
                 <td class="col-3">
                     <button class="btn btn-danger" onclick='borrarRegistro(<?php echo $genero->id_ge; ?>)'>Borrar</button>
-                    <button class="btn btn-Secondary" data-bs-toggle="modal" data-bs-target="#editGen<?php echo $genero->id_ge; ?>">Editar</button>
-                    <?php echo $genero->id_ge; ?>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editGen<?php echo $genero->id_ge; ?>">Editar</button>
                 </td>
             </tr>
             <div class="modal fade" id="editGen<?php echo $genero->id_ge; ?>" tabindex="-1" aria-labelledby="Nuevo" aria-hidden="true">

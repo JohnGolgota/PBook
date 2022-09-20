@@ -1,3 +1,10 @@
+:root{
+    --color1: #272727;
+    --color2: #fed766;
+    --color3: #009fb7;
+    --color4: #696773;
+    --bg: #eff1f3;
+}
 body {
-    background-color: rgb(145, 150, 155);
+    background-color: var(--bg);
 }

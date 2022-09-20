@@ -28,8 +28,9 @@
             <div class="modal fade" id="editGen<?php echo $genero->id_ge; ?>" tabindex="-1" aria-labelledby="Nuevo" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <form action="GenController.php" method="POST">
-                            <input type="hidden" name="action" value="editar" >
+                        <form action="GenController.php" method="GET">
+                            <input type="hidden" name="action" value="editar">
+                            <input type="hidden" name="id_ge" value="<?php echo $genero->id_ge; ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title">Nueva categoria:</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -41,7 +42,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="descripcion_ge" class="form-label">Descripción:</label>
-                                    <textarea class="form-control" name="descripcion_ge" id="descripcion_ge" cols="30" rows="6" maxlength="255" placeholder="<?php echo $genero->descripcion_ge; ?>"></textarea>
+                                    <input class="form-control" name="descripcion_ge" id="descripcion_ge" cols="30" rows="6" maxlength="255" value="<?php echo $genero->descripcion_ge; ?>">
                                 </div>
                                 <div class="modal-footer input-group">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

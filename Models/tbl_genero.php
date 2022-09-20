@@ -33,5 +33,13 @@ class tbl_genero{
         $delete = $conexion->stm->prepare($sql);
         $delete->execute();
     }
+    public function UpdateGen()
+    {
+        include_once '../Config/conectdb.php';
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_genero SET nombre_ge='$this->nombre_ge', descripcion_ge = '$this->descripcion_ge' WHERE id_ge = '$this->id_ge'";
+        $update = $conexion->stm->prepare($sql);
+        $update->execute();
+    }
 }
 ?>

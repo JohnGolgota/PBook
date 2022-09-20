@@ -44,6 +44,6 @@ CREATE TABLE tbl_usuarios(
 CREATE TABLE tbl_genero_libro(
     id_ge int,
     id_li int,
-    FOREIGN KEY id_ge REFERENCES tbl_genero(id_ge),
-    FOREIGN KEY id_li REFERENCES tbl_libros(id_li)
+    FOREIGN KEY (id_ge) REFERENCES tbl_genero(id_ge),
+    FOREIGN KEY (id_li) REFERENCES tbl_libros(id_li)
 );

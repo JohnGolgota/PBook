@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="nombre_ge" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" name="nombre_ge" id="nombre_ge" placeholder="SFW">
+                        <input type="text" class="form-control" name="nombre_ge" id="nombre_ge" placeholder="SFW" maxlength="50">
                     </div>
                     <div class="mb-3">
                         <label for="descripcion_ge" class="form-label">Descripción:</label>
@@ -27,31 +27,16 @@
     </div>
 </div>
 
+
 <!-- Librerias Js inportadas y Fontawesome -->
 <script src="https://kit.fontawesome.com/8a160a18f4.js" crossorigin="anonymous"></script>
 
 <script src="../Public/Js/sweetalert.min.js"></script>
 
+<script src="../Public/Js/app.js"></script>
+
 <script>
-    // function borrarRegistro(id) {
-    //     swal({
-    //             title: "¿Seguro?",
-    //             text: "El registro sera irecuperable!",
-    //             icon: "warning",
-    //             buttons: true,
-    //             dangerMode: true,
-    //         })
-    //         .then((willDelete) => {
-    //             if (willDelete) {
-    //                 swal("Poof! Se comvirtio en chocapick!", {
-    //                     icon: "success",
-    //                 });
-    //                 location.href = "./eliminar.php?id=" + id;
-    //             } else {
-    //                 swal("Salvado!");
-    //             }
-    //         });
-    // }
+
     // function borrarCargo(id) {
     //     swal({
     //             title: "¿Seguro?",

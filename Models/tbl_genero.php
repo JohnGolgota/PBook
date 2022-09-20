@@ -25,5 +25,13 @@ class tbl_genero{
         $objetoGeneros = $prepare->fetchAll(PDO::FETCH_OBJ);
         return $objetoGeneros;
     }
+    public function BorrarId()
+    {
+        include_once '../Config/conectdb.php';
+        $conexion = new Conexion();
+        $sql = "DELETE FROM tbl_genero WHERE id_ge='$this->id_ge'";
+        $delete = $conexion->stm->prepare($sql);
+        $delete->execute();
+    }
 }
 ?>

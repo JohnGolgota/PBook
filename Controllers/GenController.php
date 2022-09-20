@@ -20,6 +20,11 @@ class GenController extends tbl_genero{
         $this->RegistrarGen();
         $this->RedirectListGen();
     }
+    public function AlistarBorrarId($id_ge)
+    {
+        $this->id_ge = $id_ge;
+        $this->BorrarId();
+    }
 }
 if (isset($_POST['action']) && $_POST['action'] == 'guardar' && !empty($_POST['nombre_ge'])) {
     $gencontroller = new GenController();
@@ -29,6 +34,10 @@ if (isset($_POST['action']) && $_POST['action'] == 'guardar' && !empty($_POST['n
 if (isset($_POST['action']) && $_POST['action'] == 'guardar' && empty($_POST['nombre_ge'])) {
     $gencontroller = new GenController();
     echo "<script>alert('Por favor introduzca un nombre')</script>";
+}
+if (isset($_GET['action']) && $_GET['action'] == 'borrar' && !empty($_GET['id_ge'])) {
+    $gencontroller = new GenController();
+    $gencontroller->AlistarBorrarId($_GET['id_ge']);
 }
 // Siempre al fondo
 if (isset($_GET)) {

@@ -38,6 +38,7 @@ CREATE TABLE tbl_usuarios(
     id_usr int AUTO_INCREMENT,
     nombre_usr varchar(100) NOT null,
     correo_usr varchar(255) not null,
+    contrasena_usr varchar(255) NOT NULL,
     PRIMARY KEY(id_usr)
 );
 

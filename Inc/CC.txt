@@ -7,3 +7,15 @@
 
 
 <?php include '../Inc/footer.html'; ?>
+
+
+
+<?php include '../Inc/headerns.html'; ?>
+
+<title></title>
+
+<?php include '../Inc/navns.html'; ?>
+
+
+
+<?php include '../Inc/footerns.html'; ?>

@@ -1,4 +1,6 @@
 <?php
+session_start();
+echo $_SESSION['u'];
 include_once '../Models/tbl_libros.php';
 class LibrosController extends tbl_libros{
     public function VistaLibros()

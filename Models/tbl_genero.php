@@ -6,7 +6,7 @@ class tbl_genero{
 
     public function RegistrarGen()
     {
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "INSERT INTO tbl_genero (nombre_ge,descripcion_ge) VALUES (?,?)";
         $insert = $conexion->stm->prepare($sql);
@@ -16,7 +16,7 @@ class tbl_genero{
     }
     public function AllGeneros()
     {
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "SELECT * FROM tbl_genero";
         $prepare = $conexion->stm->prepare($sql);
@@ -27,7 +27,7 @@ class tbl_genero{
     }
     public function BorrarId()
     {
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "DELETE FROM tbl_genero WHERE id_ge='$this->id_ge'";
         $delete = $conexion->stm->prepare($sql);
@@ -35,7 +35,7 @@ class tbl_genero{
     }
     public function UpdateGen()
     {
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "UPDATE tbl_genero SET nombre_ge='$this->nombre_ge', descripcion_ge = '$this->descripcion_ge' WHERE id_ge = '$this->id_ge'";
         $update = $conexion->stm->prepare($sql);

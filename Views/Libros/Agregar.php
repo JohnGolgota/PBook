@@ -31,7 +31,8 @@
                 <?php foreach ($objetoAutores as $autor) { ?>
                     <option value="<?php echo $autor->id_au; ?>"><?php echo $autor->nombre_au; ?></option>
                 <?php } ?>
-            </datalist><!-- fin bucle -->
+                <!-- fin bucle -->
+            </datalist>
             <!-- Lista de autores -->
             <!-- Arte -->
             <div class="input-group mb-2">

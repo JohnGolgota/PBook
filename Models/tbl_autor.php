@@ -10,7 +10,7 @@ class tbl_autor{
     protected $nobras;
 
     public function RegistrarAutor(){
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "INSERT INTO tbl_autor (nombre_au,seudonimo_au,nacio_au,fnacio_au,ocupacion_au,lenguao_au) VALUES (?,?,?,?,?,?)";
         $insert = $conexion->stm->prepare($sql);
@@ -24,7 +24,7 @@ class tbl_autor{
     }
     public function AllAuthors()
     {
-        include_once '../Config/conectdb.php';
+        include_once '../Config/Conexion.php';
         $conexion = new Conexion();
         $sql = "SELECT * FROM tbl_autor ORDER BY id_au DESC";
         $prepare = $conexion->stm->prepare($sql);

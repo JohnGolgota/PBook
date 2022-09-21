@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SESSION['u'];
 include_once '../Models/tbl_libros.php';
 class LibrosController extends tbl_libros{
     public function VistaLibros()
@@ -30,12 +29,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'prueba') {
     // $libroscontroller->VistaAgregarLibro();
     return;
 }
-if (isset($_GET)) {
-    $libroscontroller = new LibrosController();
-    $libroscontroller->VistaLibros();
-    return;
-}
-if (!isset($_GET)) {
+if (!isset($_GET) || isset($_GET)) {
     $libroscontroller = new LibrosController();
     $libroscontroller->VistaLibros();
     return;

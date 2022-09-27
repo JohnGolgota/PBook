@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../Models/tbl_autor.php';
 class AutorController extends tbl_autor{
     public function VistaAgregarAutor()

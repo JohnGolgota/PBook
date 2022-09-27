@@ -17,3 +17,22 @@ function borrarRegistro(id) {
             }
         });
 }
+function borrarCuenta(correo) {
+    swal({
+        title: "Borrar Cuenta",
+        text: "No podras recuperar la información",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+    .then((willDelete) => {
+        if (willDelete) {
+            swal("Adios.", {
+                icon: "success",
+            });
+            location.href = "./UsuarioController.php?action=delete&correo_usr=" + correo;
+        } else {
+            swal("Salvado!");
+        }
+    });
+}

@@ -46,5 +46,13 @@ class tbl_usuarios{
         }
         return 0;
     }
+    public function ActualizarUsuario()
+    {
+        include_once '../Config/Conexion.php';
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_usuarios SET nombre_usr = '$this->nombre_usr' WHERE correo_usr = '$this->correo_usr'";
+        $consulta = $conexion->stm->prepare($sql);
+        $consulta->execute();
+    }
 }
 ?>

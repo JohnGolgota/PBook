@@ -28,7 +28,7 @@ if (session_status() != FALSE) {
     <!-- Personalizados:Css -->
     <link rel="stylesheet" href="./Public/Css/style.css">
 
-    <title>Colleccion<title>
+    <title>Colleccion</title>
 
 </head>
 

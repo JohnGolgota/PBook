@@ -50,36 +50,38 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <div class="d-flex">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Perfil">
                         <?php echo $_SESSION['nombre_usr']; ?>
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="Perfil" tabindex="-1" aria-labelledby="ModalPerfil"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                                    <h5 class="modal-title" id="">Perfil</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"aria-label="Close"></button>
                                 </div>
-                                <form action="UsuarioController.php" method="post">
+                                <form action="UsuarioController.php" method="POST">
                                     <input type="hidden" name="action" value="actualizar">
+                                    <input type="hidden" name="correo_usr" value="<?php echo $_SESSION['correo_usr']; ?>">
                                     <div class="modal-body">
                                         <label for="nombre_usr">Nombre de usuario:</label>
                                         <input class="form-control" type="text" name="nombre_usr" id="nombre_usr" value="<?php echo $_SESSION['nombre_usr']; ?>">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">Actualizar Perfil</button>
+                                        <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
                                         <a href="../" class="btn btn-secondary">Cerrar Sesion</a>
+                                        <button class="btn btn-danger" onclick="borrarCuenta('<?php echo $_SESSION['correo_usr']; ?>');">Borrar Cuenta</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </nav>

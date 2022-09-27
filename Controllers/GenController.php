@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../Models/tbl_genero.php';
 class GenController extends tbl_genero{
     public function VistaListaGen()
@@ -8,7 +9,7 @@ class GenController extends tbl_genero{
     }
     public function RedirectListGen()
     {
-        header("Location: GenController.php");
+        header("Location: GenController.php?c=".$_SESSION['correo_usr']."&u=".$_SESSION['nombre_usr']);
     }
     public function AlistarInformacion($nombre_ge,$descripcion_ge)
     {

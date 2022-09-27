@@ -29,8 +29,8 @@
                     </div>-->
                     <div class="card-footer">
                         <div class="row">
-                            <a href="AutorController.php?action=edit<?php echo $autor->id_au; ?>" class="btn btn-outline-warning col">Editar</a>
-                            <a href="AutorController.php?action=delete<?php echo $autor->id_au; ?>" class="btn btn-outline-danger col">Eliminar</a>
+                            <a href="AutorController.php?action=edit&id_au=<?php echo $autor->id_au; ?>" class="btn btn-outline-warning col">Editar</a>
+                            <a href="AutorController.php?action=delete&id_au=<?php echo $autor->id_au; ?>" class="btn btn-outline-danger col">Eliminar</a>
                         </div>
                     </div>
                 </div>

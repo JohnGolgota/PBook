@@ -33,5 +33,32 @@ class tbl_autor{
         $objetoAutores = $prepare->fetchAll(PDO::FETCH_OBJ);
         return $objetoAutores;
     }
+    public function ConsultarAutor()
+    {
+        include_once '../Config/Conexion.php';
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_autor WHERE id_au = $this->id_au";
+        $prepare = $conexion->stm->prepare($sql);
+        $prepare->execute();
+
+        $objetoAutor = $prepare->fetchAll(PDO::FETCH_OBJ);
+        return $objetoAutor;
+    }
+    public function EditarAutor()
+    {
+        include_once '../Config/Conexion.php';
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_autor SET nombre_au = '$this->nombre_au', seudonimo_au = '$this->seudonimo_au', nacio_au = '$this->nacio_au', fnacio_au = '$this->fnacio_au', ocupacion_au = '$this->ocupacion_au', lenguao_au = '$this->lenguao_au' WHERE id_au = $this->id_au";
+        $prepare = $conexion->stm->prepare($sql);
+        $prepare->execute();
+    }
+    public function BorrarAutor()
+    {
+        include_once '../Config/Conexion.php';
+        $conexion = new Conexion();
+        $sql = "DELETE FROM tbl_autor WHERE id_autor = $this->id_autor";
+        $prepare = $conexion->stm->prepare($sql);
+        $prepare->execute();
+    }
 }
 ?>

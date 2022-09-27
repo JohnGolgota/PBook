@@ -24,7 +24,7 @@
         </div>
     </form>
     <hr>
-    <label for="inicio">No tienes Cuenta?</label>
+    <label for="">No tienes Cuenta?</label>
     <a href="./UsuarioController.php?action=registrar" class="btn btn-outline-dark">Registrate!</a>
 </div>
 <?php include '../Inc/footerns.html'; ?>

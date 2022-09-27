@@ -24,14 +24,12 @@ class LibrosController extends tbl_libros{
     }
     public function PrepararInformacion()
     {
-        // if ($_POST['id_li'] != "") {
-            // echo "que?";
-            // }
-        // if ($_POST['id_li'] == "") {
-        //     $_POST['id_li'] = "";
+        // if ($_POST['id_li'] != null) {
+        //     $this->id_li = $_POST['id_li'];
         // }
-        $this->id_li = $_POST['id_li'];
-
+        // if ($_POST['id_li'] == null) {
+        //     $this->id_li = $_POST['id_li'];
+        // }
         if ($_POST['titulo_li'] == "") {
             $_POST['titulo_li'] = "El titulo";
         }

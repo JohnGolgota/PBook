@@ -56,7 +56,7 @@ class tbl_autor{
     {
         include_once '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "DELETE FROM tbl_autor WHERE id_autor = $this->id_autor";
+        $sql = "DELETE FROM tbl_autor WHERE id_au = $this->id_au";
         $prepare = $conexion->stm->prepare($sql);
         $prepare->execute();
     }

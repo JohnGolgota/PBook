@@ -90,6 +90,11 @@ class AutorController extends tbl_autor{
         $this->EditarAutor();
         $this->RedirigirListaAutores();
     }
+    public function PrepararBorrarAutor($id_au)
+    {
+        $this->id_au = $id_au;
+        $this->BorrarAutor();
+    }
 }
 if (isset($_GET['c'], $_GET['u'])) {
     $_SESSION['correo_usr'] = $_GET['c'];
@@ -100,7 +105,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'edit') {
     $autorcontroller->VistaEditarAutor();
     return;
 }
-if (isset($_POST['action']) && $_POST['action'] == 'editar' && !empty($_POST['nombre_au'])) { 
+if (isset($_POST['action']) && $_POST['action'] == 'editar' && !empty($_POST['nombre_au'] && $_POST['id_au'])) { 
     $autorcontroller = new AutorController();
     $autorcontroller->AlistarInformacionEditar($_POST['id_au'],$_POST['nombre_au'],$_POST['seudonimo_au'],$_POST['fnacio_au'],$_POST['nacio_au'],$_POST['ocupacion_au'],$_POST['lenguao_au']);
     $autorcontroller->RedirigirListaAutores();
@@ -127,13 +132,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'lista') {
     $autorcontroller->VistaListaAutor();
     return;
 }
-if (!isset($_GET)) {
-    echo "Lista autores";
+if (isset($_GET['action']) && $_GET['action'] == 'delete' && !empty($_GET['id_au'])) {
+    $autorcontroller = new AutorController();
+    $autorcontroller->PrepararBorrarAutor($_GET['id_au']);
+    $autorcontroller->VistaListaAutor();
     return;
-    // $autorcontroller = new AutorController();
-    // $autorcontroller->
 }
-if (isset($_GET)) {
+if (isset($_GET['action']) && $_GET['action'] == 'delete' && empty($_POST['id_au'])) {
+    echo "Don. Comedia Eh?.";
+}
+if (isset($_GET) || !isset($_GET)) {
     $autorcontroller = new AutorController();
     $autorcontroller->VistaListaAutor();
     return;

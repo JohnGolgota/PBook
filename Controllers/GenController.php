@@ -37,6 +37,10 @@ class GenController extends tbl_genero{
         $this->BorrarId();
     }
 }
+if (isset($_GET['c'], $_GET['u'])) {
+    $_SESSION['correo_usr'] = $_GET['c'];
+    $_SESSION['nombre_usr'] = $_GET['u'];
+}
 if (isset($_POST['action']) && $_POST['action'] == 'guardar' && !empty($_POST['nombre_ge'])) {
     $gencontroller = new GenController();
     $gencontroller->AlistarInformacion($_POST['nombre_ge'],$_POST['descripcion_ge']);

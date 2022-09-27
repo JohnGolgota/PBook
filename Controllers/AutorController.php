@@ -46,6 +46,10 @@ class AutorController extends tbl_autor{
         $this->RedirigirListaAutores();
     }
 }
+if (isset($_GET['c'], $_GET['u'])) {
+    $_SESSION['correo_usr'] = $_GET['c'];
+    $_SESSION['nombre_usr'] = $_GET['u'];
+}
 if (isset($_GET['action']) && $_GET['action'] == 'agregar') {
     $autorcontroller = new AutorController();
     $autorcontroller->VistaAgregarAutor();

@@ -2,7 +2,7 @@
 
 <title>Generos</title>
 
-<?php include '../Inc/nav.html'; ?>
+<?php include '../Inc/nav.php'; ?>
 <div class="container">
 
     <h1>

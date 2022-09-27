@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../Public/Css/flstyle.css">
 <title>Nuevo Libro</title>
 
-<?php include '../Inc/nav.html'; ?>
+<?php include '../Inc/nav.php'; ?>
 <?php //var_dump($objetoAutores); 
 ?>
 <?php //var_dump($objetoGeneros); 

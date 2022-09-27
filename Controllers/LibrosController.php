@@ -18,6 +18,10 @@ class LibrosController extends tbl_libros{
         include_once '../Views/Libros/Agregar.php';
     }
 }
+if (isset($_GET['c'], $_GET['u'])) {
+    $_SESSION['correo_usr'] = $_GET['c'];
+    $_SESSION['nombre_usr'] = $_GET['u'];
+}
 if (isset($_GET['action']) && $_GET['action'] == 'agregar') {
     $libroscontroller = new LibrosController();
     $libroscontroller->VistaAgregarLibro();

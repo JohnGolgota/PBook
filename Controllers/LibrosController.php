@@ -4,6 +4,15 @@ include_once '../Models/tbl_libros.php';
 class LibrosController extends tbl_libros{
     public function VistaLibros()
     {
+        $AllLibros = $this->AllLibros();
+        $SuperConsultaInner = $this->SuperConsultaInner();
+        include_once '../Models/tbl_autor.php';
+        $tbl_autor = new tbl_autor();
+        $AllAuthors = $tbl_autor->AllAuthors();
+        include_once  '../Models/tbl_genero.php';
+        $tbl_genero = new tbl_genero();
+        $AllGeneros = $tbl_genero->AllGeneros();
+        # var_dump($objetoLibros);
         include_once '../Views/Libros/Libros.php';
     }
     public function RedirigirColeccion()
@@ -19,7 +28,7 @@ class LibrosController extends tbl_libros{
         include_once  '../Models/tbl_genero.php';
         $genero = new tbl_genero();
         $objetoGeneros = $genero->AllGeneros();
-        $objetoLibros = $this->AllLibros();
+
         include_once '../Views/Libros/Agregar.php';
     }
     public function PrepararInformacion()
@@ -91,7 +100,7 @@ class LibrosController extends tbl_libros{
         $this->id_au = $_POST['id_au'];
 
         if ($_POST['id_ge'] == "") {
-            $_POST['id_ge'] = "";
+            $_POST['id_ge'] = "0";
         }
         $this->id_ge =  $_POST['id_ge'];
     }

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../Public/Css/flstyle.css">
 <title>Nuevo Libro</title>
 
-<?php include '../Inc/nav.html'; ?>
+<?php include '../Inc/nav.php'; ?>
 <?php //var_dump($objetoAutores); 
 ?>
 <?php //var_dump($objetoGeneros); 
@@ -11,7 +11,7 @@
     <div class="container-sm">
         <h2>Nuevo Libro</h2>
         <form action="./LibrosController.php" method="POST" class="">
-            <input type="hidden" name="action" value="prueba">
+            <input type="hidden" name="action" value="insert">
             <!-- Titulos -->
             <div class="input-group mb-2">
                 <input placeholder="Titulo" type="text" name="titulo_li" id="titulo_li" class="form-control">
@@ -25,14 +25,14 @@
                 <input placeholder="Numero en la Saga" type="number" name="orderse_li" id="orderse_li" class="form-control" min="0" value="0">
             </div>
             <!-- Lista de autores -->
-            <input class="form-control mb-2" list="ListaAu" name="listaautores_li" id="listaautores_li" placeholder="Autor...">
-            <datalist id="ListaAu">
+            <select id="id_au" name="id_au" class="form-control">
+                <option value="" checked>Elije el autor del libro...</option>
                 <!-- inicio bucle -->
                 <?php foreach ($objetoAutores as $autor) { ?>
                     <option value="<?php echo $autor->id_au; ?>"><?php echo $autor->nombre_au; ?></option>
                 <?php } ?>
                 <!-- fin bucle -->
-            </datalist>
+            </select>
             <!-- Lista de autores -->
             <!-- Arte -->
             <div class="input-group mb-2">
@@ -47,6 +47,10 @@
             <!-- generos -->
             <h5>Selecciona el genero... (uno porque no se hacerlo con checkbox)</h5>
             <div class="input-group mb-2">
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="id_ge" id="ninguno" value="ninguno" class="form-check-input" checked>
+                    <label class="form-check-label" for="ninguno">Ninguno</label>
+                </div>
                 <?php foreach ($objetoGeneros as $genero) { ?>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" id="<?php echo $genero->nombre_ge; ?>" name="id_ge" value="<?php echo $genero->id_ge; ?>">

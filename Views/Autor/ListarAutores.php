@@ -2,7 +2,7 @@
 
 <title>Lista de Autores</title>
 
-<?php include '../Inc/nav.html'; ?>
+<?php include '../Inc/nav.php'; ?>
 
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -29,8 +29,8 @@
                     </div>-->
                     <div class="card-footer">
                         <div class="row">
-                            <a href="AutorController.php?action=edit<?php echo $autor->id_au; ?>" class="btn btn-outline-warning col">Editar</a>
-                            <a href="AutorController.php?action=delete<?php echo $autor->id_au; ?>" class="btn btn-outline-danger col">Eliminar</a>
+                            <a href="AutorController.php?action=edit&id_au=<?php echo $autor->id_au; ?>" class="btn btn-outline-warning col">Editar</a>
+                            <a href="AutorController.php?action=delete&id_au=<?php echo $autor->id_au; ?>" class="btn btn-outline-danger col">Eliminar</a>
                         </div>
                     </div>
                 </div>

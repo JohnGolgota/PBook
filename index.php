@@ -1,3 +1,8 @@
+<?php
+if (session_status() != FALSE) {
+    // session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +28,7 @@
     <!-- Personalizados:Css -->
     <link rel="stylesheet" href="./Public/Css/style.css">
 
-    <title>Colleccion <?php echo "Holi" ?></title>
+    <title>Colleccion</title>
 
 </head>
 

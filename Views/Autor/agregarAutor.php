@@ -3,7 +3,7 @@
 
 <title>Formulario de ingreso Autor</title>
 
-<?php include '../Inc/nav.html'; ?>
+<?php include '../Inc/nav.php'; ?>
 
 <div class="container-sm">
     <div class="container-sm">
